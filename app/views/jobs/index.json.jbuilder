@@ -1,12 +1,17 @@
 json.jobs do |json|
   json.array!(@jobs) do |job|
+    # Main Elements
     json.id job.id
     json.company job.company
+    json.position job.position
+    json.location job.location
+    json.salary job.salary
+    json.status job.status
+
+    # Secondary Elements
+    json.contact job.contact
     json.email job.email
-    json.date_posted job.date_posted
-    json.date_emailed job.date_emailed
-    json.email_template job.email_template
-    json.addressed_to job.addressed_to
+    json.template job.template
     json.notes job.notes
   end
 end
